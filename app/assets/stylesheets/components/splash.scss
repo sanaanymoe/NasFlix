@@ -1,0 +1,90 @@
+/* .main-page{
+    background-image: url('../images//splash.jpg');
+    background-size: cover;
+} */
+
+.main-div {
+    // background-image: url(https://assets.nflxext.com/ffe/siteui/vlv3/dead63cd-f004-43ff-9ecb-d6381f56b76e/0a8f62ef-224d-46e3-be2c-e7b1227c51b8/US-en-20200617-popsignuptwoweeks-perspective_alpha_website_small.jpg);
+    background-image: image-url("splash.jpg");
+    position: relative;
+    height: 1000px;
+    width: 100%;
+}
+
+.sub-main {
+    background-color: rgba(0,0,0,.75) ;
+}
+
+.head-stuff {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.demo-login {
+   /* display: flex;
+   justify-content: center; */
+
+   background-color: #E50914;
+   color: white;
+   font-size: 16px;
+   padding-top: 8px;
+   padding-bottom: 8px;
+   padding-left: 17px;
+   padding-right: 17px;
+   border-radius: 3px;
+   border: none;
+   align-self: center;
+//    /* margin-right: 20px;  */
+   font-weight: 300;
+//    /* border-radius: 1%; */
+//    font-family: sans-serif;
+//    /* font: arial; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+}
+
+.center-stuf {
+    padding-top: 300px;
+}
+
+.red-button{
+   background-color: #DC1A28;
+   text-decoration: none;
+   padding: 10px 15px;
+   border-radius: 3px;
+//    font-size: 0.9rem;
+   color: white;
+   border-style: none;
+  
+}
+
+.red-button:hover {
+    cursor: pointer;
+}
+
+.nas-flix-logo {
+    color: #DC1A28;
+    font-size: 40px;
+    text-decoration: none;
+    font-family: cursive;
+    font-weight: bold;
+    width: 200px;
+    margin-left: 20px;
+}
+
+.main-page-text {
+    color: white;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    font-style: oblique;
+    margin-bottom: 40px;
+
+
+}
+

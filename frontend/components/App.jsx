@@ -14,15 +14,13 @@ import loginFormContainer from './session/login_form_container'
 import { AuthRoute, ProtectedRoute } from '../util/route_util'
 
 const App = () => (
-    <div>
-        
+    <div className="sub-main">
+    
         <Switch>
             <AuthRoute exact path='/login' component={loginFormContainer} />
             <AuthRoute exact path='/signup' component={signupFormContainer} />
         </Switch>
         <Route exact path='/' component={GreetingContainer} />
-        
-        
         
     </div>
 );

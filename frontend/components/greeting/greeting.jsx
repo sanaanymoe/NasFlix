@@ -19,17 +19,20 @@ class Greeting extends React.Component {
     sessionLinks(){
         return (
             <div className="main-div">
-                <header>
-                    <Link className="nas-flix-logo" to="/"><p>NasFlix</p></Link>
-                </header>
-                    <nav>
+                <nav className="sub-main">
+                {/* <header>
+                </header> */}
+                    <nav className="head-stuff">
+                         <Link className="nas-flix-logo" to="/"><p>NasFlix</p></Link>
                         <Link className="login red-button" to="/login">Login</Link>
-                    <span className="signup red-button">
-                         <Link className="red-button" to="/signup">Sign up</Link>
-                    </span>
                     </nav>
-                    <span className="main-page-text">Here you can find your favorite movies and TV shows</span>
-                    <button className="red-button demo-login" onClick={this.demoLoginHandler}>Demo User</button>
+                    <main className="center-stuf">
+                        <p className="main-page-text">Here you can find your favorite movies and TV shows</p>
+                        <button className="demo-login red-button" onClick={this.demoLoginHandler}>Demo User</button>
+                        <Link className="signup red-button" to="/signup">Sign up</Link>
+
+                    </main>
+                </nav>
             </div>
         )
     }
@@ -38,7 +41,7 @@ class Greeting extends React.Component {
         return (
         <nav>
             <p>Signed in as: {`${this.props.currentUser.email}`}</p>
-            <button onClick={this.props.logout}>Log Out</button>
+            <button className="red-button" onClick={this.props.logout}>Log Out</button>
         </nav>
         )
     }

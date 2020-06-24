@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class SessionForm extends React.Component {
 
@@ -39,6 +40,9 @@ class SessionForm extends React.Component {
     render() {
         return (
             <div className="main-div">
+                <header>
+                    <Link className="nas-flix-logo" to="/">NasFlix</Link>
+                </header>
                 <div className="login-signup-form">
                     <form onSubmit={this.handleSubmit}>
                         <h1 className="form-title">{this.props.formType}</h1>
@@ -64,7 +68,7 @@ class SessionForm extends React.Component {
                                 />
                         </label>
                         <br/>
-                        <button className="login-sign-up-buttons">{this.props.formType}</button>
+                        <button className="login-sign-up-buttons red-button">{this.props.formType}</button>
                     </form>
 
                 </div>
