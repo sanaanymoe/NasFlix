@@ -1,0 +1,76 @@
+import React from 'react';
+
+class SessionForm extends React.Component {
+
+    constructor(props) {
+        super(props)
+        this.state = {
+            email: '',
+            password: ''
+        };
+        this.handleSubmit = this.handleSubmit.bind(this)
+        // this.renderErrors = this.renderErrors.bind(this)    
+    }
+
+    update(field){
+        return event => this.setState({
+            [field]: event.target.value
+        });
+    }
+
+    handleSubmit(event) {
+        event.preventDefault();
+        const user = Object.assign({}, this.state);
+        this.props.handleForm(user)
+    }
+
+    // renderErrors() {
+    //     return (
+    //         <ul>
+    //             {this.props.errors.map((error, i) => (
+    //                 <li>
+    //                     {error}
+    //                 </li>
+    //             ))}
+    //         </ul>
+    //     );
+    // }
+
+    render() {
+        return (
+            <div className="main-div">
+                <div className="login-signup-form">
+                    <form onSubmit={this.handleSubmit}>
+                        <h1 className="form-title">{this.props.formType}</h1>
+                        <br/>
+                        {/* Please {this.props.formType} or {this.props.alt}
+                        {this.renderErrors()}  */}
+                        <br/>
+                        <label>
+                            <input 
+                                className="nfinput"
+                                type="text"
+                                value={this.state.email}
+                                onChange={this.update('email')}
+                                />
+                        </label>
+                        <br/>
+                        <label>
+                            <input 
+                                className="nfinput"
+                                type="password"
+                                value={this.state.password}
+                                onChange={this.update('password')}
+                                />
+                        </label>
+                        <br/>
+                        <button className="login-sign-up-buttons">{this.props.formType}</button>
+                    </form>
+
+                </div>
+            </div>
+        )
+    }
+};
+
+export default SessionForm;
