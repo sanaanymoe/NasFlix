@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_24_205154) do
+ActiveRecord::Schema.define(version: 2020_06_24_231824) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -56,7 +56,7 @@ ActiveRecord::Schema.define(version: 2020_06_24_205154) do
   create_table "videos", force: :cascade do |t|
     t.string "title", null: false
     t.string "description", null: false
-    t.string "type", null: false
+    t.string "video_type", null: false
     t.integer "year", null: false
     t.integer "length", null: false
     t.integer "genre_id", null: false
@@ -64,7 +64,7 @@ ActiveRecord::Schema.define(version: 2020_06_24_205154) do
     t.datetime "updated_at", null: false
     t.index ["genre_id"], name: "index_videos_on_genre_id"
     t.index ["title"], name: "index_videos_on_title"
-    t.index ["type"], name: "index_videos_on_type"
+    t.index ["video_type"], name: "index_videos_on_video_type"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"

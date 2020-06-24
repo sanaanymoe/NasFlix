@@ -6,7 +6,7 @@
 #  description :string           not null
 #  length      :integer          not null
 #  title       :string           not null
-#  type        :string           not null
+#  video_type  :string           not null
 #  year        :integer          not null
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
@@ -14,9 +14,9 @@
 #
 # Indexes
 #
-#  index_videos_on_genre_id  (genre_id)
-#  index_videos_on_title     (title)
-#  index_videos_on_type      (type)
+#  index_videos_on_genre_id    (genre_id)
+#  index_videos_on_title       (title)
+#  index_videos_on_video_type  (video_type)
 #
 
 # This model initially had no columns defined. If you add columns to the

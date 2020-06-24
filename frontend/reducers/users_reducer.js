@@ -6,7 +6,7 @@ const usersReducer = (state = {}, action) => {
         case RECEIVE_CURRENT_USER:
             // return Object.assign({},state, { [action.currentUser.id]: action.currentUser }) 
             let nextState = Object.assign({} , state) 
-            // debugger
+            
             nextState[action.currentUser.id] = action.currentUser
             return nextState
         default:
