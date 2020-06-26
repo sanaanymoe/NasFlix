@@ -13,7 +13,7 @@ class VideoIndex extends React.Component {
         return (
             <div>
                 <button className="red-button" onClick={this.props.logout}>Log Out</button>
-                <ul>
+                <ul  className="video-player">
                     {
                         videos.map(video => (
                             <VideoIndexItem 

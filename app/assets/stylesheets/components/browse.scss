@@ -1,3 +1,13 @@
-.video-player {
+video {
     height: 200px;
 }
+
+ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+   list-style-type: none;
+   div {
+       padding: 10px;
+   }
+}
+

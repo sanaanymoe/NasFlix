@@ -41,43 +41,46 @@ class SessionForm extends React.Component {
     render() {
         return (
             <div className="main-div">
-                <header>
-                    <Link className="nas-flix-logo" to="/">NasFlix</Link>
-                </header>
-                <div className="login-signup-form">
-                    <form onSubmit={this.handleSubmit}>
-                        <h1 className="form-title">{this.props.formType}</h1>
-                        <br/>
-                        
-                        {/* {this.renderErrors()}  */}
-                        <br/>
-                        <label>
-                            <input 
-                                className="nfinput"
-                                type="text"
-                                placeholder="email"
-                                value={this.state.email}
-                                onChange={this.update('email')}
-                                />
-                        </label>
-                        <br/>
-                        <label>
-                            <input 
-                                className="nfinput"
-                                type="password"
-                                placeholder="password"
-                                value={this.state.password}
-                                onChange={this.update('password')}
-                                />
-                        </label>
-                        <br/>
-                        <button className="login-sign-up-buttons red-button">{this.props.formType}</button>
-                        <span className="red-button options-message">
-                            {/* Please {this.props.formType} or  */}
-                            {this.props.alt}
-                        </span>
-                    </form>
+                <div className="sub-main">
 
+                    <header>
+                        <Link className="nas-flix-logo" to="/">NasFlix</Link>
+                    </header>
+                    <div className="login-signup-form">
+                        <form onSubmit={this.handleSubmit}>
+                            <h1 className="form-title">{this.props.formType}</h1>
+                            <br/>
+                            
+                            {/* {this.renderErrors()}  */}
+                            <br/>
+                            <label>
+                                <input 
+                                    className="nfinput"
+                                    type="text"
+                                    placeholder="email"
+                                    value={this.state.email}
+                                    onChange={this.update('email')}
+                                    />
+                            </label>
+                            <br/>
+                            <label>
+                                <input 
+                                    className="nfinput"
+                                    type="password"
+                                    placeholder="password"
+                                    value={this.state.password}
+                                    onChange={this.update('password')}
+                                    />
+                            </label>
+                            <br/>
+                            <button className="login-sign-up-buttons red-button">{this.props.formType}</button>
+                            <span className="red-button options-message">
+                                {/* Please {this.props.formType} or  */}
+                                {this.props.alt}
+                            </span>
+                        </form>
+
+                    </div>
                 </div>
             </div>
         )
