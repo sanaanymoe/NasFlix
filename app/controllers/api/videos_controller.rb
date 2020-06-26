@@ -3,6 +3,7 @@ class Api::VideosController < ApplicationController
 
     def index
         @videos = Video.all 
+        
         render "api/videos/index"
     end
 
@@ -10,6 +11,7 @@ class Api::VideosController < ApplicationController
         @video = Video.find(params[:id])
 
         if @video
+            @genre_name = Genre.find(@video.genre_id).name
             render "api/videos/show"
         else 
             render json: @video.errors.full_messages, status: 422

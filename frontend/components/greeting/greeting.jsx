@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 
 // import demoUser from  '../../util/demo'
 
@@ -8,7 +8,7 @@ class Greeting extends React.Component {
         super(props);
         this.demoLoginHandler = this.demoLoginHandler.bind(this)
         this.sessionLinks = this.sessionLinks.bind(this)
-        this.personalGreeting = this.personalGreeting.bind(this)
+        // this.personalGreeting = this.personalGreeting.bind(this)
     }
     
     demoLoginHandler(event){
@@ -19,7 +19,7 @@ class Greeting extends React.Component {
     sessionLinks(){
         return (
             <div className="main-div">
-                <nav className="sub-main">
+                    <nav className="sub-main">
                 {/* <header>
                 </header> */}
                     <nav className="head-stuff">
@@ -37,47 +37,24 @@ class Greeting extends React.Component {
         )
     }
         
-    personalGreeting(){
-        return (
-        <nav>
-            <p>Signed in as: {`${this.props.currentUser.email}`}</p>
-            <button className="red-button" onClick={this.props.logout}>Log Out</button>
-        </nav>
-        )
-    }
+    // personalGreeting(){
+    //     return (
+    //     <nav>
+    //         <p>Signed in as: {`${this.props.currentUser.email}`}</p>
+    //         <button className="red-button" onClick={this.props.logout}>Log Out</button>
+    //     </nav>
+    //     )
+    // }
         
     render() {
         return (
             <div>
-                {this.props.currentUser ? this.personalGreeting() : this.sessionLinks()}
+                {this.props.currentUser ? <Redirect to="/browse"/> : this.sessionLinks()}
             </div>
             
         )
     }
 }
 
-// const Greeting = ({ currentUser, logout, login, demoUser }) => {
-   
-//     const demoLoginHandler = (event) => {
-//         event.preventDefault()
-//         login(demoUser)
-//     }
-//     const sessionLinks = () => (
-//         <nav>
-//             <Link to="/login">Login</Link>
-//             <Link to="/signup">Sign up</Link>
-//             <button onClick={demoLoginHandler}>Demo User</button>
-//         </nav>
-//     );
-
-//     const personalGreeting = () => (
-//         <nav>
-//             <p>Signd in as: {`${currentUser.email}`}</p>
-//             <button onClick={logout}>Log Out</button>
-//         </nav>
-//     );
-    
-//     return currentUser ? personalGreeting() : sessionLinks();
-// }
 
 export default Greeting;

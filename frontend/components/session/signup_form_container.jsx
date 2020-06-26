@@ -10,7 +10,7 @@ const mSTP = ({ errors }) => {
     return {
         errors: errors.session ,
         formType: 'signup',
-        alt: <Link to='/signup'>log in instead</Link>
+        alt: <Link to='/login'>log in instead</Link>
     }
 };
 

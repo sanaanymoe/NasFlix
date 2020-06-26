@@ -9,10 +9,13 @@
     position: relative;
     height: 1000px;
     width: 100%;
+    // background-color: rgba(0,0,0,.75);
 }
 
 .sub-main {
     background-color: rgba(0,0,0,.75) ;
+    height: 100%;
+
 }
 
 .head-stuff {
@@ -50,6 +53,12 @@
 
 .center-stuf {
     padding-top: 300px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
 }
 
 .red-button{

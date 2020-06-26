@@ -27,9 +27,10 @@ class SessionForm extends React.Component {
 
     // renderErrors() {
     //     return (
+                
     //         <ul>
     //             {this.props.errors.map((error, i) => (
-    //                 <li>
+    //                 <li className="errors-list">
     //                     {error}
     //                 </li>
     //             ))}
@@ -47,8 +48,8 @@ class SessionForm extends React.Component {
                     <form onSubmit={this.handleSubmit}>
                         <h1 className="form-title">{this.props.formType}</h1>
                         <br/>
-                        {/* Please {this.props.formType} or {this.props.alt}
-                        {this.renderErrors()}  */}
+                        
+                        {/* {this.renderErrors()}  */}
                         <br/>
                         <label>
                             <input 
@@ -69,6 +70,10 @@ class SessionForm extends React.Component {
                         </label>
                         <br/>
                         <button className="login-sign-up-buttons red-button">{this.props.formType}</button>
+                        <span className="red-button options-message">
+                            {/* Please {this.props.formType} or  */}
+                            {this.props.alt}
+                        </span>
                     </form>
 
                 </div>

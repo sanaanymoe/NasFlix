@@ -37,7 +37,7 @@
     text-decoration: none;
     width: 150px;
     margin-top: 20px;
-    margin-left: 870px;
+    margin-left: 0px;
    background-color: #E50914;
    color: white;
    font-size: 16px;
@@ -95,4 +95,19 @@
     color: honeydew;
     padding-left: 62px;
     font-size: xx-large;
+}
+
+.errors-list {
+    background-color: white;
+}
+
+.options-message {
+    background-color: darkgray;
+    
+    display: flex;
+    justify-content: center;
+    margin: 10px 0px 0px 30px;
+    width: 137px;
+
+
 }

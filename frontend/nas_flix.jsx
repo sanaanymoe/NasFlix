@@ -1,10 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import * as SessionAPIUtil from './util/session_api_util' 
+import * as SessionAPIUtil from './util/session_api_util';
+import * as VideoAPIUtils from './util/video_api_util';
+
 import configureStore from './store/store';
 import Root from './components/root'
 import { login, receiveCurrentUser} from './actions/session_actions'
+import { fetchVideo, fetchAllVideos } from './actions/video_actions'
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -43,4 +46,8 @@ document.addEventListener("DOMContentLoaded", () => {
     window.dispatch = store.dispatch;
     window.login = login 
     window.currentUser = receiveCurrentUser
+    window.fetchAllVideos = VideoAPIUtils.fetchAllVideos
+    // window.fetchVideo = VideoAPIUtils.fetchVideo
+    window.fetchVideo = fetchVideo
+
 });
