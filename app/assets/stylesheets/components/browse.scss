@@ -1,13 +1,42 @@
-video {
-    height: 200px;
+.video-item {
+    height: 260px;
+    transition: all 1s ease-in-out;
+    
+}
+.video-item:hover {
+    // transition: ease-out;
+    // transform: scale(1.5);
+    // -webkit-transition: transform 2s ease-in-out;
+    transform: scale(1.2);
+    cursor: pointer;
 }
 
 ul {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
    list-style-type: none;
    div {
        padding: 10px;
    }
+}
+
+.header-links {
+    display: flex;
+    background-color: black;
+    flex-direction: row;
+    justify-content: space-between;
+
+    div{
+        display: flex;
+    }
+    
+    .header-link {
+        color: white;
+        margin: 20px 10px;
+    }
+
+    .red-button {
+        margin-top: 10px;
+    }
 }
 

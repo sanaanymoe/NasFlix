@@ -12,7 +12,21 @@ class VideoIndex extends React.Component {
         const { videos } = this.props
         return (
             <div>
-                <button className="red-button" onClick={this.props.logout}>Log Out</button>
+                
+                <header className="header-links">
+                    <div>
+
+                        <Link className="nas-flix-logo" to="/"><p>NasFlix</p></Link>
+                        <Link className="header-link" to="">Home</Link>
+                        <Link className="header-link" to="">Movies</Link>
+                        <Link className="header-link" to="">TV Shows</Link>
+                    </div>
+                    <span>
+
+                     <button className="red-button" id="loout-button" onClick={this.props.logout}>Log Out</button>
+                    </span>
+                </header>
+
                 <ul  className="video-player">
                     {
                         videos.map(video => (

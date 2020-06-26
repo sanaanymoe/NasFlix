@@ -15,8 +15,10 @@ class VideoIndexItem extends React.Component {
             return (
                 <div>
                   <link rel="shortcut icon" href=""/>
-                  {/* <Link to={`/api/videos/${this.props.video.id}`}>{this.props.video.title}</Link> */}
+                  <Link to={`/api/videos/${this.props.video.id}`}>{this.props.video.title}</Link>
+                  
                   <video 
+                  className="video-item"
                   src={this.props.video.video_url} 
                   controls onMouseEnter={this.playVideo} 
                   muted={true}
