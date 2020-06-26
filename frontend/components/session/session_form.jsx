@@ -29,7 +29,7 @@ class SessionForm extends React.Component {
     //     return (
                 
     //         <ul>
-    //             {this.props.errors.map((error, i) => (
+    //             {this.props.errors.map((error) => (
     //                 <li className="errors-list">
     //                     {error}
     //                 </li>
@@ -55,6 +55,7 @@ class SessionForm extends React.Component {
                             <input 
                                 className="nfinput"
                                 type="text"
+                                placeholder="email"
                                 value={this.state.email}
                                 onChange={this.update('email')}
                                 />
@@ -64,6 +65,7 @@ class SessionForm extends React.Component {
                             <input 
                                 className="nfinput"
                                 type="password"
+                                placeholder="password"
                                 value={this.state.password}
                                 onChange={this.update('password')}
                                 />

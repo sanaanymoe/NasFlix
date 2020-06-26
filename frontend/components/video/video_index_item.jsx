@@ -10,6 +10,7 @@ class VideoIndexItem extends React.Component {
         render () {
             return (
                 <div>
+                            <link rel="shortcut icon" href=""/>
                   <Link to={`/api/videos/${this.props.video.id}`}>{this.props.video.title}</Link>
                   <video 
                   className="vide-player"
