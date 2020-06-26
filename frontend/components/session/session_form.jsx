@@ -25,20 +25,22 @@ class SessionForm extends React.Component {
         this.props.handleForm(user)
     }
 
-    // renderErrors() {
-    //     return (
+    renderErrors() {
+        // debugger
+        return (
                 
-    //         <ul>
-    //             {this.props.errors.map((error) => (
-    //                 <li className="errors-list">
-    //                     {error}
-    //                 </li>
-    //             ))}
-    //         </ul>
-    //     );
-    // }
+            <ul className="errors-ul">
+                {this.props.errors.map((error, i) => (
+                    <li className="errors-list" key={`error-${i}`}>
+                        {error}
+                    </li>
+                ))}
+            </ul>
+        );
+    }
 
     render() {
+        // debugger
         return (
             <div className="main-div">
                 <div className="sub-main">
@@ -51,7 +53,6 @@ class SessionForm extends React.Component {
                             <h1 className="form-title">{this.props.formType}</h1>
                             <br/>
                             
-                            {/* {this.renderErrors()}  */}
                             <br/>
                             <label>
                                 <input 
@@ -78,6 +79,7 @@ class SessionForm extends React.Component {
                                 {/* Please {this.props.formType} or  */}
                                 {this.props.alt}
                             </span>
+                                    {this.renderErrors()} 
                         </form>
 
                     </div>

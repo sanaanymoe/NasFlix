@@ -98,7 +98,13 @@
 }
 
 .errors-list {
-    background-color: white;
+    background-color: grey;
+    font-family: cursive;
+}
+
+.errors-ul {
+    display: flex;
+    margin-top: 20px;
 }
 
 .options-message {
