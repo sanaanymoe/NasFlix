@@ -45,8 +45,10 @@ class SessionForm extends React.Component {
             <div className="main-div">
                 <div className="sub-main">
 
-                    <header>
-                        <Link className="nas-flix-logo" to="/">NasFlix</Link>
+                    <header className="head-stuff">
+                        {/* <Link className="nas-flix-logo" to="/">NasFlix</Link> */}
+                        <Link className="nas-flix-logo" to="/"><img src="https://fontmeme.com/permalink/200627/49ea4c9322c8aa449bd39d80af5de911.png" alt="" /></Link>
+                        {/* <Link className="nas-flix-logo" to="/"><img src={require("../../../app/assets/images/logo.png")} alt="" /></Link> */}
                     </header>
                     <div className="login-signup-form">
                         <form onSubmit={this.handleSubmit}>

@@ -6,6 +6,7 @@
 .main-div {
     // background-image: url(https://assets.nflxext.com/ffe/siteui/vlv3/dead63cd-f004-43ff-9ecb-d6381f56b76e/0a8f62ef-224d-46e3-be2c-e7b1227c51b8/US-en-20200617-popsignuptwoweeks-perspective_alpha_website_small.jpg);
     background-image: image-url("splash.jpg");
+    background-repeat: no-repeat;
     position: relative;
     height: 1000px;
     width: 100%;
@@ -21,6 +22,7 @@
 .head-stuff {
     display: flex;
     justify-content: space-between;
+
 }
 
 
@@ -100,3 +102,15 @@
 
 }
 
+.footer-links{
+        width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    height: 50px;
+
+    .icon {
+    margin: 5px;
+    height: 50px;
+    width: 50px;
+    }
+}

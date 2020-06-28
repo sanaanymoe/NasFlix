@@ -1,5 +1,8 @@
 import React from 'react';
 import { Link, Redirect } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
+
 
 // import demoUser from  '../../util/demo'
 
@@ -23,7 +26,8 @@ class Greeting extends React.Component {
                 {/* <header>
                 </header> */}
                     <nav className="head-stuff">
-                         <Link className="nas-flix-logo" to="/"><p>NasFlix</p></Link>
+                         {/* <Link className="nas-flix-logo" to="/"><p>NasFlix</p></Link> */}
+                        <Link className="nas-flix-logo" to="/"><img src="https://fontmeme.com/permalink/200627/49ea4c9322c8aa449bd39d80af5de911.png" alt=""/></Link>
                         <Link className="login red-button" to="/login">Login</Link>
                     </nav>
                     <main className="center-stuf">
@@ -49,10 +53,24 @@ class Greeting extends React.Component {
     render() {
         return (
             <div>
-                {this.props.currentUser ? <Redirect to="/browse"/> : this.sessionLinks()}
+                {this.props.currentUser ? <Redirect to="/home"/> : this.sessionLinks()}
+
+
+                <div className="footer-links">
+                    <a href="https://www.linkedin.com" target="_blank">
+                        <FontAwesomeIcon className="icon" icon={faLinkedin} />
+                    </a>
+                    <a href="https://github.com" target="_blank">
+                        <FontAwesomeIcon className="icon" icon={faGithub} />
+                    </a>
+                </div>
             </div>
+           
+           
             
         )
+
+        
     }
 }
 

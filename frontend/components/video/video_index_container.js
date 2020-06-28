@@ -9,7 +9,7 @@ import VideoIndex from './video_index';
 
 
 const mSTP = (state) => ({
-    videos: Object.values(state.entities.videos)
+    videos: Object.values(state.entities.videos),
 });
 
 const mDTP = dispatch => ({

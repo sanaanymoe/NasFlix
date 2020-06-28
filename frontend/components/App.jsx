@@ -8,9 +8,12 @@ import {
     HashRouter
 } from 'react-router-dom';
 
+
 import GreetingContainer from './greeting/greeting_container'
 import signupFormContainer from './session/signup_form_container'
 import videoIndexContainer from './video/video_index_container'
+import moviesIndexContainer from './video/movies_index_container'
+import showsIndexContainer from './video/shows_index_container'
 import loginFormContainer from './session/login_form_container'
 import { AuthRoute, ProtectedRoute } from '../util/route_util'
 
@@ -20,7 +23,9 @@ const App = () => (
         <Switch>
             <AuthRoute exact path='/login' component={loginFormContainer} />
             <AuthRoute exact path='/signup' component={signupFormContainer} />
-            <ProtectedRoute path='/browse' component={videoIndexContainer}/>
+            <ProtectedRoute path='/movies' component={moviesIndexContainer}/>
+            <ProtectedRoute path='/shows' component={showsIndexContainer}/>
+            <ProtectedRoute path='/home' component={videoIndexContainer}/>
         </Switch>
         <Route exact path='/' component={GreetingContainer} />
         

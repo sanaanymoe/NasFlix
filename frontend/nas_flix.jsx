@@ -11,7 +11,7 @@ import { fetchVideo, fetchAllVideos } from './actions/video_actions'
 
 
 document.addEventListener("DOMContentLoaded", () => {
-
+    <script src="https://kit.fontawesome.com/45c1b3afa1.js" crossorigin="anonymous"></script>
     let store;
     if (window.currentUser) {
         const preloadedState = {
