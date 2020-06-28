@@ -48,7 +48,7 @@ class VideoIndex extends React.Component {
                 <div  className="grid-container">
                     
                     {
-                        
+                      
                         videos.slice(1).map(video => (
                                 <VideoIndexItem 
                                 className="in-grid"
