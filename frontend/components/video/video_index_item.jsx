@@ -23,7 +23,9 @@ class VideoIndexItem extends React.Component {
                 <div > 
                     
                   <link rel="shortcut icon" href=""/>
-                  {/* <Link to={`/api/videos/${this.props.video.id}`}>{this.props.video.title}</Link> */}
+                  <Link className="video-title" to=""/*{`/api/videos/${this.props.video.id}`}*/>{this.props.video.title}</Link>
+                  
+                  
                   
                   <video 
                   className="video-item"
