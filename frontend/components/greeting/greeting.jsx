@@ -55,12 +55,48 @@ class Greeting extends React.Component {
             <div>
                 {this.props.currentUser ? <Redirect to="/home"/> : this.sessionLinks()}
 
+                
+
+
+                <div className='tv'>
+                    <div className='tv-text'>
+                        <h2>Enjoy on your TV.</h2>
+                        <br />
+                        <p>Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</p>
+                    </div>
+
+                    <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png" />
+                </div>
+
+
+            <div className='phone'>
+                <div className='phone-text'>
+                    <h2> Download your shows to watch offline.</h2>
+                    <p> Save your favorites easily and always have something to watch.</p>
+                </div>
+
+                    <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg" width="400" height="400" />
+
+            </div>
+
+            <div className='watch'>
+                <div className='watch-text'>
+                    <h2>Watch everywhere.</h2>
+                    <p>Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV without paying more.</p>
+                </div>
+
+                    <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile.png" width="400" height="400" />
+
+            </div>
+
+
+
 
                 <div className="footer-links">
                     <a href="https://www.linkedin.com" target="_blank">
                         <FontAwesomeIcon className="icon" icon={faLinkedin} />
                     </a>
-                    <a href="https://github.com" target="_blank">
+                    <a href="https://github.com/sanaanymoe" target="_blank">
                         <FontAwesomeIcon className="icon" icon={faGithub} />
                     </a>
                 </div>

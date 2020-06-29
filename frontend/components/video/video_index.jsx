@@ -4,17 +4,27 @@ import VideoIndexItem from './video_index_item';
 
 class VideoIndex extends React.Component {
 
-    setMainVideo(videos){
-        return mainVideo = videos[0]
-    }
 
     componentDidMount(){
         this.props.fetchAllVideos()
     }
 
+    playVideo(e) {
+        e.currentTarget.play()
+    }
+
     render () {
         const { videos } = this.props
-        // const mainVideo = videos[0]
+        // const urls = [
+        //     "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--aa47d0799fdfe09fde860fe37b581aac902614a1/lawsoftheuniverse.mp4",
+        //     "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a89e5eacfeced1965f266be367863a5d8dc3a6a5/darkseidwar.mp4",
+        //     "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--edc9c4fb160d2cfd6abd06788eee043d4096ce31/sherman.mp4",
+        //     "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBHQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--329bb61c90655203c11862bec52e7719227c0100/shorts.mp4",
+        //     "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBGUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f06ad4953103a5353c7fdf9c1cafcc36573d9c7b/connected.mp4"
+        // ]
+        // const url = urls[Math.floor(Math.random() * 4)]
+        
+        // const mainVideo  = this.props.videos[0]
         // debugger
         return (
             
@@ -38,18 +48,42 @@ class VideoIndex extends React.Component {
                 </header>
                 
                 
-
-                    <VideoIndexItem
+                <div className="preview-container">
+                    {/* <VideoIndexItem
                         className="main-video"
                         video={videos.slice(0,1)}
-                    />
+                    /> */}
+
+                    <video 
+                        className="main-video"
+                        muted={true}
+                        // autoPlay
+                        controls onMouseEnter={this.playVideo}
+                        src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--edc9c4fb160d2cfd6abd06788eee043d4096ce31/sherman.mp4">
+
+                    </video>
+
+                    <div className="preview-overlay">
+                          <div className="video-details">
+                                <h3>MR. Peabody and Sherman</h3>
+                                {/* <div className="ovelay-buttons">
+                                        <button onClick={this.playVideo}><FontAwesomeIcon icon={faPlay} /> Play</button>
+                                        <button onClick={this.volumeToggle}><FontAwesomeIcon icon={faVolumeMute} /></button>
+                                </div> */}
+                                <p>Mr. Peabody and Sherman is a 2014 American computer-animated science fiction comedy film based on characters from the Peabody's Improbable History segments of the animated television series The Rocky and Bullwinkle Show, produced by DreamWorks Animation and distributed by 20th Century Fox.</p>
+                          </div>
+                  </div>
+
+                </div>
+                
+
                 
                 
                 <div  className="grid-container">
                     
                     {
                       
-                        videos.slice(1).map(video => (
+                        videos.map(video => (
                                 <VideoIndexItem 
                                 className="in-grid"
                                 video={video}
