@@ -27,12 +27,12 @@ class Greeting extends React.Component {
                 </header> */}
                     <nav className="head-stuff">
                          {/* <Link className="nas-flix-logo" to="/"><p>NasFlix</p></Link> */}
-                        <Link className="nas-flix-logo" to="/"><img src="https://fontmeme.com/permalink/200627/49ea4c9322c8aa449bd39d80af5de911.png" alt=""/></Link>
+                        <Link className="nas-flix-logo" to="/"><img src={window.logoURL} alt=""/></Link>
                         <Link className="login red-button" to="/login">Login</Link>
                     </nav>
                     <main className="center-stuf">
                         <p className="main-page-text">Your favorite movies and TV shows all in one place</p>
-                        <p className="center-text">Ready for fun?Sign up or just click on Demo User below to try our site</p>
+                        <p className="center-text">Ready for fun? Sign up or just click on Demo User below to try our site</p>
                         <button className="demo-login red-button" onClick={this.demoLoginHandler}>Demo User</button>
                         <Link className="signup red-button" to="/signup">Sign up</Link>
 
