@@ -10,6 +10,7 @@ import VideoIndex from './video_index';
 
 const mSTP = (state) => ({
     videos: Object.values(state.entities.videos),
+    // mainVideo: Object.values(state.entities.videos)[Math.floor(Math.random() * videos.length)]
 });
 
 const mDTP = dispatch => ({

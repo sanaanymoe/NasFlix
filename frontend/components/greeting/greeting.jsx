@@ -31,7 +31,8 @@ class Greeting extends React.Component {
                         <Link className="login red-button" to="/login">Login</Link>
                     </nav>
                     <main className="center-stuf">
-                        <p className="main-page-text">Here you can find your favorite movies and TV shows</p>
+                        <p className="main-page-text">Your favorite movies and TV shows all in one place</p>
+                        <p className="center-text">Ready for fun?Sign up or just click on Demo User below to try our site</p>
                         <button className="demo-login red-button" onClick={this.demoLoginHandler}>Demo User</button>
                         <Link className="signup red-button" to="/signup">Sign up</Link>
 
@@ -79,8 +80,8 @@ class Greeting extends React.Component {
 
             </div>
 
-            <div className='watch'>
-                <div className='watch-text'>
+            <div className='tablet'>
+                <div className='tablet-text'>
                     <h2>Watch everywhere.</h2>
                     <p>Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV without paying more.</p>
                 </div>

@@ -39,19 +39,19 @@
     background: linear-gradient(#30323e, #1e1f2a) 0% 0%/cover;
     background-image: linear-gradient(#30323e, #1e1f2a);
     margin-bottom: 50px;
-    
+    // margin-left: 15px;
 }
 
 .video-title {
     color: white;
 }
 
-.video-item .in-grid:hover {
+.video-item:hover {
     // transition: ease-out;
     // transform: scale(1.5);
     // -webkit-transition: transform 2s ease-in-out;
-    transition: all 1s ease-in-out;
-    transform: scale(1.2);
+    // transition: all 1s ease-in-out;
+    // transform: scale(1.2);
     cursor: pointer;
 }
 
