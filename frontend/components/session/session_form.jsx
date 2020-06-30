@@ -13,6 +13,10 @@ class SessionForm extends React.Component {
         // this.renderErrors = this.renderErrors.bind(this)    
     }
 
+    componentWillUnmount(){
+        this.props.removeErrors()
+    }
+
     update(field){
         return event => this.setState({
             [field]: event.target.value
