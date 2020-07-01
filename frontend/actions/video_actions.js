@@ -54,9 +54,16 @@ export const fetchVideoDetails = (videoId) => {
 }
 
 
-export const searchVideos = (keyWord) => dispatch => (
-    VideoAPIUtils.searchVideos(keyWord)
+export const searchVideos = (keyword) => dispatch => (
+    VideoAPIUtils.searchVideos(keyword)
         .then(videos => (dispatch(receiveVideos(videos))), error => (
+            dispatch(receiveErrors(error.responseJSON))
+        ))
+);
+
+export const filterByGenre = genreName => dispatch => (
+    VideoAPIUtils.filterByGenre(genreName)
+        .then( videos => (dispatch(receiveVideos(videos))), error => (
             dispatch(receiveErrors(error.responseJSON))
         ))
 );

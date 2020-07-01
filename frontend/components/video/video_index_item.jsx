@@ -21,7 +21,7 @@ class VideoIndexItem extends React.Component {
 
         handleClick() {
                 this.state.toggle ? this.setState({ toggle: false }) : this.setState({ toggle: true })
-                console.log("clicked!")
+                // console.log("clicked!")
         }
 
         playVideo(e) {

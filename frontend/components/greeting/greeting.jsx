@@ -26,7 +26,7 @@ class Greeting extends React.Component {
                 {/* <header>
                 </header> */}
                     <nav className="head-stuff">
-                         {/* <Link className="nas-flix-logo" to="/"><p>NasFlix</p></Link> */}
+                         
                         <Link className="nas-flix-logo" to="/"><img src={window.logoURL} alt=""/></Link>
                         <Link className="login red-button" to="/login">Login</Link>
                     </nav>

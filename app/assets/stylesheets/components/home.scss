@@ -81,6 +81,7 @@
 
     .red-button {
         margin-top: 10px;
+        box-shadow: 0px 5px 6px grey;
     }
 
 }
@@ -225,11 +226,45 @@ border-radius: 6px;
         justify-content: center;
         align-items: center;
         text-align: center;
-        color: yellow;
+        color: silver;
     }
     
     h4 {
         text-align: center;
-        color: red; 
+        color: lightblue; 
     }
+}
+
+.search-form{
+
+        
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid gray; */
+    // height: 26px;
+    /* top: 10px; */
+    // margin-top: 18px;
+    margin-left: 37px;
+}
+
+.search-box {
+    color: whitesmoke;
+    border: 1px solid gray;
+    margin-right: 5px;
+    border-radius: 5px;
+    height: 25px;
+    margin-bottom: 10px;
+}
+.search-button {
+    color: whitesmoke;
+    border: 1px solid gray;
+    border-radius: 5px;
+    height: 25px;
+    margin-bottom: 10px;
+        width: 50px;
+    text-align: center;
+    background: crimson;
+    // box-shadow: rgba(0,0,0,0.69) 0px 26px 30px -10px, rgba(0,0,0,0.73) 0px 16px 10px -10px;
+    box-shadow: 0px 5px 6px grey;
 }

@@ -14,11 +14,18 @@ export const fetchVideo = (videoId) => (
 );
 
 
-export const searchVideos = (keyWord) => (
+export const searchVideos = (keyword) => (
     $.ajax({
         method: 'GET',
-        url: `api/videos/?q${keyWord.toLowerCase()}`,
+        url: "/api/videos",
+        data: { keyword }
+    })
+)
 
-        // data: { keyword }
+export const filterByGenre = genreName => (
+    $.ajax({
+        method: 'GET',
+        url: `/api/videos/genre`,
+        data: { genreName }
     })
 )

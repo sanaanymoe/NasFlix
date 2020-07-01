@@ -2,6 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import VideoIndexItem from './video_index_item';
 
+import SearchContainer from '../../components/search/search_container'
+import GenreContainer from '../../components/genre/genre_container'
+
 // import { FontAwesomeIcon } from '@fortawesome/react - fontawesome';
 // import { faPlay } from "@fortawesome/free-solid-svg-icons";
 // import { faVolumeMute } from "@fortawesome/free-solid-svg-icons";
@@ -11,7 +14,7 @@ class VideoIndex extends React.Component {
     constructor(props){
         super(props)
         this.state = {
-            filteredVideos: this.props.videos
+            videos: this.props.videos
         }
         this.handleLinkClick = this.handleLinkClick.bind(this)
         // this.newVideos = []
@@ -26,8 +29,9 @@ class VideoIndex extends React.Component {
     }
 
     handleLinkClick(e){
-        this.setState({ filteredVideos: this.props.videos.filter(video => video.genre.name === e.currentTarget.name)}) 
-    //    debugger
+        console.log("genre clicked")
+        debugger
+        this.setState({ videos: this.props.videos.filter(video => video.genre.name === e.currentTarget.name)}) 
     }
 
     render () {
@@ -50,6 +54,7 @@ class VideoIndex extends React.Component {
                         <Link className="header-link" to="">Home</Link>
                         <Link className="header-link" to="/movies">Movies</Link>
                         <Link className="header-link" to="/shows">TV Shows</Link>
+                        <SearchContainer/>
                     </div>
                     <span>
                         <button className="red-button" id="loout-button" onClick={this.props.logout}>Log Out</button>
@@ -75,13 +80,14 @@ class VideoIndex extends React.Component {
                     <div className="preview-overlay">
                         <div className="dropdown">
                             <button className="dropbtn">Genres</button>
-                            <div className="dropdown-content">
+                            {/* <div className="dropdown-content">
                                 <a name="Comedy" onClick={this.handleLinkClick}>Comedy</a>
                                 <a name="Action" onClick={this.handleLinkClick}>Action</a>
                                 <a name="Crime" onClick={this.handleLinkClick}>Crime</a>
                                 <a name="Horror" onClick={this.handleLinkClick}>Horror</a>
                                             
-                            </div>
+                            </div> */}
+                            <GenreContainer/>
                         </div>
                           <div className="video-details">
                                 <h3>{mainVideo.title}</h3>
@@ -102,7 +108,7 @@ class VideoIndex extends React.Component {
 
                 <div  className="grid-container">
                     
-                 {/* {   this.newVideos.length > 0 ? 
+                 {/* { {   this.newVideos.length > 0 ? 
                         (this.newVideos.map(video => (
                           <VideoIndexItem
                               className="in-grid"
@@ -111,25 +117,30 @@ class VideoIndex extends React.Component {
                           />
                       )))
                       :
-                      (videos.map(video => (
+                      ( */}
+                      {
+                          videos.map(video => (
                                 <VideoIndexItem 
                                 className="in-grid"
                                 video={video}
                                 key={video.id}
                                 />
-                        )))
+                        ))
+
+                        
+                        // )
                       
 
                         
-                    } */
+                    // } 
                     
-                        this.state.filteredVideos.map(video => (
-                            <VideoIndexItem
-                                className="in-grid"
-                                video={video}
-                                key={video.id}
-                            />
-                        ))
+                        // this.state.filteredVideos.map(video => (
+                        //     <VideoIndexItem
+                        //         className="in-grid"
+                        //         video={video}
+                        //         key={video.id}
+                        //     />
+                        // ))
                     
                     }
                 </div>

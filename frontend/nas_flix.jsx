@@ -7,7 +7,7 @@ import * as VideoAPIUtils from './util/video_api_util';
 import configureStore from './store/store';
 import Root from './components/root'
 import { login, receiveCurrentUser} from './actions/session_actions'
-import { fetchVideo, fetchAllVideos } from './actions/video_actions'
+import { fetchVideo, fetchAllVideos, searchVideos, filterByGenre } from './actions/video_actions'
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -49,5 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.fetchAllVideos = VideoAPIUtils.fetchAllVideos
     // window.fetchVideo = VideoAPIUtils.fetchVideo
     window.fetchVideo = fetchVideo
+    window.searchVideos = searchVideos
+    window.filterByGenre = filterByGenre
 
 });

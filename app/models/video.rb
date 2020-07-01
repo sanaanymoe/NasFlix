@@ -28,4 +28,14 @@ class Video < ApplicationRecord
         class_name: :Genre
 
     has_one_attached :video_url
+
+    def self.search_by_keyword(keyword) 
+        Video
+            .where("LOWER(title) LIKE ? ", "%#{keyword.downcase}%")
+    end 
+
+    
+
 end
+
+
