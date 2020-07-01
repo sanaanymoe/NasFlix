@@ -31,7 +31,9 @@ class VideoIndexItem extends React.Component {
         pauseVideo(e) {
                 e.currentTarget.pause()
         }
+
         render () {
+                // debugger
             return (
                 <div > 
                     
@@ -43,15 +45,16 @@ class VideoIndexItem extends React.Component {
                   
                   <video 
                   className="video-item"
-                  src={this.props.video.video_url} 
+                  src={this.props.video.video_url}
+                  poster={this.props.video.image}
                   controls onMouseEnter={this.playVideo} 
                   muted={true}
-                  autoPlay
+                //   autoPlay
                   onClick={this.handleClick}
 
                 //   onClick={() => this.playVideo}
                 //   controls
-                //   controls onMouseLeave={this.pauseVideo}
+                  controls onMouseLeave={this.pauseVideo}
                   />
 
                 {this.state.toggle ? <VideoItemDetailsContainer videoId={this.props.video.id} /> : ""}

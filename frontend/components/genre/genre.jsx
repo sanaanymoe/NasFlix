@@ -30,7 +30,6 @@ class Genre extends React.Component {
                 <a name="Action" onClick={this.handleLinkClick}>Action</a>
                 <a name="Crime" onClick={this.handleLinkClick}>Crime</a>
                 <a name="Horror" onClick={this.handleLinkClick}>Horror</a>
-
             </div>
         )
     }

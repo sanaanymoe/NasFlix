@@ -30,7 +30,7 @@ mr_peabody_and_sherman = Video.create(title: "MR. Peabody and Sherman", descript
 sherman_show = Video.create(title: "MR. Peabody and Sherman Show", description: "Mr. Peabody & Sherman is a 2014 American computer-animated science fiction comedy film based on characters from the Peabody's Improbable History segments of the animated television series The Rocky and Bullwinkle Show, produced by DreamWorks Animation and distributed by 20th Century Fox.", video_type: "show", year: 2014, length: 80, genre_id: comedy.id)
 connected = Video.create(title: "Connected", description: "Connected is an upcoming American computer-animated science fiction comedy film produced by Sony Pictures Animation.", video_type: "movie", year: 2015, length: 80, genre_id: comedy.id)
 smiling_woman = Video.create(title: "Smiling Woman", description: "On a late night at an empty train station, a lone traveler is terrorized by a creepy smiling woman.", video_type: "movie", year: 2019, length: 80, genre_id: horror.id)
-sponge_pop = Video.create(title: "Sponge Pop", description: "The SpongeBob Movie: Sponge on the Run is an upcoming American live-action/computer-animated adventure comedy film based on the animated television series SpongeBob SquarePants.", video_type: "movie", year: 2019, length: 80, genre_id: comedy.id)
+sponge_bob = Video.create(title: "Sponge Bob", description: "The SpongeBob Movie: Sponge on the Run is an upcoming American live-action/computer-animated adventure comedy film based on the animated television series SpongeBob SquarePants.", video_type: "movie", year: 2019, length: 80, genre_id: comedy.id)
 shorts = Video.create(title: "Shorts", description: "Shorts is set in the suburb of Black Falls, where all the houses look the same and everyone works for BLACK BOX Unlimited Worldwide Industries Incorporated", video_type: "movie", year: 2009, length: 80, genre_id: action.id)
 
 #creating video files from files url
@@ -42,7 +42,7 @@ mr_peabody_and_sherman_video = open('https://nasflix-seeds.s3-us-west-1.amazonaw
 sherman_show_video = open('https://nasflix-seeds.s3-us-west-1.amazonaws.com/shermanshow.mp4')
 connected_video = open('https://nasflix-seeds.s3-us-west-1.amazonaws.com/connected.mp4')
 smiling_woman_video = open('https://nasflix-seeds.s3-us-west-1.amazonaws.com/smilingwoman.mp4')
-sponge_pop_video = open('https://nasflix-seeds.s3-us-west-1.amazonaws.com/spongepop.mp4')
+sponge_bob_video = open('https://nasflix-seeds.s3-us-west-1.amazonaws.com/spongepop.mp4')
 shorts_video = open('https://nasflix-seeds.s3-us-west-1.amazonaws.com/shorts.mp4')
 
 # attach videos urls to videos
@@ -54,7 +54,31 @@ mr_peabody_and_sherman.video_url.attach(io: mr_peabody_and_sherman_video, filena
 sherman_show.video_url.attach(io: sherman_show_video, filename: "shermanshow.mp4")
 connected.video_url.attach(io: connected_video, filename: "connected.mp4")
 smiling_woman.video_url.attach(io: smiling_woman_video, filename: "smilingwoman.mp4")
-sponge_pop.video_url.attach(io: sponge_pop_video, filename: "spongepop.mp4")
+sponge_bob.video_url.attach(io: sponge_bob_video, filename: "spongepop.mp4")
 shorts.video_url.attach(io: shorts_video, filename: "shorts.mp4")
 
 
+#adding images
+
+laws_of_the_universe_picture = open('https://nasflix-seeds.s3-us-west-1.amazonaws.com/laws.jpg')
+the_black_hole_picture = open('https://nasflix-seeds.s3-us-west-1.amazonaws.com/blackhole.jpg')
+darkseid_war_picture = open('https://nasflix-seeds.s3-us-west-1.amazonaws.com/darkseid.jpg')
+mr_peabody_and_sherman_picture = open('https://nasflix-seeds.s3-us-west-1.amazonaws.com/sherman.jpg')
+sherman_show_picture = open('https://nasflix-seeds.s3-us-west-1.amazonaws.com/shermanshow.jpg')
+connected_picture = open('https://nasflix-seeds.s3-us-west-1.amazonaws.com/connected.jpg')
+smiling_woman_picture = open('https://nasflix-seeds.s3-us-west-1.amazonaws.com/smilingwoman.jpg')
+sponge_bob_picture = open('https://nasflix-seeds.s3-us-west-1.amazonaws.com/spongebob.jpg')
+shorts_picture = open('https://nasflix-seeds.s3-us-west-1.amazonaws.com/shorts.jpg')
+
+
+#attaching images to videos
+
+laws_of_the_universe.image.attach(io: laws_of_the_universe_picture, filename: "laws.jpg")
+the_black_hole.image.attach(io: the_black_hole_picture, filename: "blackhole.jpg")
+darkseid_war.image.attach(io: darkseid_war_picture, filename: "darkseid.jpg") 
+mr_peabody_and_sherman.image.attach(io: mr_peabody_and_sherman_picture, filename: "sherman.jpg")
+sherman_show.image.attach(io: sherman_show_picture, filename: "shermanshow.jpg")
+connected.image.attach(io: connected_picture, filename: "connected.jpg")
+smiling_woman.image.attach(io: smiling_woman_picture, filename: "smilingwoman.jpg")
+sponge_bob.image.attach(io: sponge_bob_picture, filename: "spongebob.jpg")
+shorts.image.attach(io: shorts_picture, filename: "shorts.jpg")

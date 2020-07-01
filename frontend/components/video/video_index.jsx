@@ -29,9 +29,9 @@ class VideoIndex extends React.Component {
     }
 
     handleLinkClick(e){
-        console.log("genre clicked")
-        debugger
-        this.setState({ videos: this.props.videos.filter(video => video.genre.name === e.currentTarget.name)}) 
+        // console.log("genre clicked")
+        // debugger
+        // this.setState({ videos: this.props.videos.filter(video => video.genre.name === e.currentTarget.name)}) 
     }
 
     render () {
@@ -47,8 +47,6 @@ class VideoIndex extends React.Component {
 
                 <header className="header-links">
                     <div>
-
-                        {/* <Link className="nas-flix-logo" to="/"><p>NasFlix</p></Link> */}
                         <Link className="nas-flix-logo" to="/"><img src={window.logoURL} alt="" /></Link>
                         
                         <Link className="header-link" to="">Home</Link>
@@ -63,11 +61,6 @@ class VideoIndex extends React.Component {
                 
                 
                 <div className="preview-container">
-                    {/* <VideoIndexItem
-                        className="main-video"
-                        video={videos.slice(0,1)}
-                    /> */}
-
                     <video 
                         className="main-video"
                         muted={true}
@@ -80,13 +73,6 @@ class VideoIndex extends React.Component {
                     <div className="preview-overlay">
                         <div className="dropdown">
                             <button className="dropbtn">Genres</button>
-                            {/* <div className="dropdown-content">
-                                <a name="Comedy" onClick={this.handleLinkClick}>Comedy</a>
-                                <a name="Action" onClick={this.handleLinkClick}>Action</a>
-                                <a name="Crime" onClick={this.handleLinkClick}>Crime</a>
-                                <a name="Horror" onClick={this.handleLinkClick}>Horror</a>
-                                            
-                            </div> */}
                             <GenreContainer/>
                         </div>
                           <div className="video-details">

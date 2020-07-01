@@ -16,8 +16,9 @@ class VideoItemDetails extends React.Component {
         return (
             <div  className="details">
                 <h3>{this.props.video.title}</h3>
-                <p>{this.props.video.description}</p>
+                <h4>{this.props.video.genre.name}</h4>
                 <h4>{this.props.video.year}</h4>
+                <p>{this.props.video.description}</p>
             </div>
         )
     }
