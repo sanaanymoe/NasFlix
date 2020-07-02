@@ -66,7 +66,7 @@ class Greeting extends React.Component {
                         <p>Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</p>
                     </div>
 
-                    <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png" />
+                    <img src={window.tvURL} />
                 </div>
 
 
@@ -76,7 +76,7 @@ class Greeting extends React.Component {
                     <p> Save your favorites easily and always have something to watch.</p>
                 </div>
 
-                    <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg" width="400" height="400" />
+                    <img src={window.phoneURL} width="400" height="400" />
 
             </div>
 
@@ -86,7 +86,7 @@ class Greeting extends React.Component {
                     <p>Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV without paying more.</p>
                 </div>
 
-                    <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile.png" width="400" height="400" />
+                    <img src={window.tabletURL} width="400" height="400" />
 
             </div>
 
