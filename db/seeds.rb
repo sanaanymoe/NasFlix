@@ -38,6 +38,7 @@ thehunt = Video.create(title: "The Hunt", description: "Twelve strangers wake up
 
 #creating video files from files url
  
+
 laws_of_the_universe_video = open('https://nasflix-seeds.s3-us-west-1.amazonaws.com/lawsoftheuniverse.mp4')
 the_black_hole_video = open('https://nasflix-seeds.s3-us-west-1.amazonaws.com/theblackhole.mp4')
 darkseid_war_video = open('https://nasflix-seeds.s3-us-west-1.amazonaws.com/darkseidwar.mp4')
