@@ -38,4 +38,18 @@ NasFlex is a NetFlix clone, it has a mix of movies and TV shows trilers.
 * Make sure PostgreSQL is runing and run:
 
   * `bundle exec rails db:setup`
+  
+## features
+
+* User can use a dropdown minue to filter movies and TV shows by Genre
+  
+![](app/assets/images/Animated.gif)
+
+* User can hover over each thumbnail to get a preview of the movie
+
+![](app/assets/images/Animated2.gif)
+
+* User can click on a video to show more information and click again to hide that information.
+
+![](app/assets/images/Animated2.gif)
 
