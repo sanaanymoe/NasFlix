@@ -3,31 +3,40 @@
 
 # NasFlix
 ## [Take a look at NasFlix Live](https://nasflix.herokuapp.com)
-### Content
+## Content
 * Introduction.
 * Technologies.
 * Setup.
 * Features
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Introduction
 
-Things you may want to cover:
+NasFlex is a NetFlix clone, it has a mix of movies and TV shows trilers.
 
-* Ruby version
+## Technologies
 
-* System dependencies
+* Ruby on rails.
+* Postgresql.
+* React / Redux.
+* AWS S3.
+* Deployed on [Heroku](https://nasflix.herokuapp.com)
 
-* Configuration
+## Setup
 
-* Database creation
+To get the application up and running do the following:
 
-* Database initialization
+Clone the project to your local machine.
 
-* How to run the test suite
+Install frontend dependencies using the command:
 
-* Services (job queues, cache servers, search engines, etc.)
+`npm install`
 
-* Deployment instructions
+Install backend dependencies using the command:
 
-* ...
+`bundle install`
+
+Make sure PostgreSQL is runing and run:
+
+`bundle exec rails db:setup`
+
+
