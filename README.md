@@ -23,20 +23,19 @@ NasFlex is a NetFlix clone, it has a mix of movies and TV shows trilers.
 
 ## Setup
 
-To get the application up and running do the following:
+### To get the application up and running do the following:
 
-Clone the project to your local machine.
+* Clone the project to your local machine.
 
-Install frontend dependencies using the command:
+* Install frontend dependencies using the command:
 
-`npm install`
+  * `npm install`
 
-Install backend dependencies using the command:
+* Install backend dependencies using the command:
 
-`bundle install`
+  * `bundle install`
 
-Make sure PostgreSQL is runing and run:
+* Make sure PostgreSQL is runing and run:
 
-`bundle exec rails db:setup`
-
+  * `bundle exec rails db:setup`
 
