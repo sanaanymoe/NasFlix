@@ -51,5 +51,5 @@ NasFlex is a NetFlix clone, it has a mix of movies and TV shows trilers.
 
 * User can click on a video to show more information and click again to hide that information.
 
-![](app/assets/images/Animated2.gif)
+![](app/assets/images/Animated3.gif)
 
