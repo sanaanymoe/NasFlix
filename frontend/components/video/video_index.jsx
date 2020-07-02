@@ -5,8 +5,9 @@ import VideoIndexItem from './video_index_item';
 import SearchContainer from '../../components/search/search_container'
 import GenreContainer from '../../components/genre/genre_container'
 
-// import { FontAwesomeIcon } from '@fortawesome/react - fontawesome';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faPlay } from "@fortawesome/free-solid-svg-icons";
+// import { faUser } from "@fortawesome/free-solid-svg-icons";
 // import { faVolumeMute } from "@fortawesome/free-solid-svg-icons";
 
 class VideoIndex extends React.Component {
@@ -57,6 +58,14 @@ class VideoIndex extends React.Component {
                     <span>
                         <button className="red-button" id="loout-button" onClick={this.props.logout}>Log Out</button>
                     </span>
+
+                    {/* <div className="dropdown">
+                        <button className="dropbtn"><FontAwesomeIcon icon={faUser}/></button>
+                        <div className="dropdown-content">
+                            <a onClick={this.props.logout}>Log Out</a>
+                        </div>
+                    </div> */}
+
                 </header>
                 
                 

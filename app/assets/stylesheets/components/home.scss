@@ -18,7 +18,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
+    // position: relative;
    
      // // height: 260px;
     // // width: 350px;
@@ -48,7 +48,7 @@
     // transition: ease-out;
     // transform: scale(1.5);
     // -webkit-transition: transform 2s ease-in-out;
-    // transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
     // transform: scale(1.2);
     cursor: pointer;
 }
@@ -204,13 +204,14 @@ border-radius: 6px;
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd;}
+.dropdown-content a:hover {background-color: red;}
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {display: block;}
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {background-color: maroon;}
+
 
 .details {
     justify-content: center;

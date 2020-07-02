@@ -33,6 +33,7 @@ class Video < ApplicationRecord
     def self.search_by_keyword(keyword) 
         Video
             .where("LOWER(title) LIKE ? ", "%#{keyword.downcase}%")
+            # .or(Video.where("LOWER(genre.name) LIKE ?" , "%#{keyword.downcase}%"))
     end 
 
     
