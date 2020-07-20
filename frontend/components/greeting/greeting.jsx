@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, Redirect } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 
 
 // import demoUser from  '../../util/demo'
@@ -93,14 +93,14 @@ class Greeting extends React.Component {
 
 
 
-                <div className="footer-links">
-                    <a href="https://www.linkedin.com" target="_blank">
+                {/* <div className="footer-links">
+                    <a href="https://www.linkedin.com/in/mohamed-sanaany-52112b1b2/" target="_blank">
                         <FontAwesomeIcon className="icon" icon={faLinkedin} />
                     </a>
                     <a href="https://github.com/sanaanymoe" target="_blank">
                         <FontAwesomeIcon className="icon" icon={faGithub} />
                     </a>
-                </div>
+                </div> */}
             </div>
            
            

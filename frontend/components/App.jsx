@@ -8,6 +8,9 @@ import {
     HashRouter
 } from 'react-router-dom';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
+
 
 import GreetingContainer from './greeting/greeting_container'
 import signupFormContainer from './session/signup_form_container'
@@ -32,6 +35,15 @@ const App = () => (
         </Switch>
         <Route exact path='/' component={GreetingContainer} />
         <Route exact path='/errors' component={Errors} />
+
+        <div className="footer-links">
+            <a href="https://www.linkedin.com/in/mohamed-sanaany-52112b1b2/" target="_blank">
+                <FontAwesomeIcon className="icon" icon={faLinkedin} />
+            </a>
+            <a href="https://github.com/sanaanymoe" target="_blank">
+                <FontAwesomeIcon className="icon" icon={faGithub} />
+            </a>
+        </div>
         
     </div>
 );

@@ -27,9 +27,6 @@
 
 
 .demo-login {
-   /* display: flex;
-   justify-content: center; */
-
    background-color: #E50914;
    color: white;
    font-size: 16px;
@@ -40,11 +37,7 @@
    border-radius: 3px;
    border: none;
    align-self: center;
-//    /* margin-right: 20px;  */
-   font-weight: 300;
-//    /* border-radius: 1%; */
-//    font-family: sans-serif;
-//    /* font: arial; */
+   font-weight: 400;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,7 +60,6 @@
    text-decoration: none;
    padding: 10px 15px;
    border-radius: 3px;
-//    font-size: 0.9rem;
    color: white;
    border-style: none;
   
@@ -81,8 +73,6 @@
     color: #DC1A28;
     font-size: 40px;
     text-decoration: none;
-    font-family: cursive;
-    font-weight: bold;
     width: 200px;
       //   height: 61px;
     margin-left: 20px;
@@ -115,7 +105,7 @@
     display: flex;
     justify-content: center;
     font-style: inherit;
-    font-family: sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     margin-bottom: 40px;
    font-size: 30px;
     font-weight: 400;
@@ -139,7 +129,7 @@
 .tv {
    font-family: Arial, Helvetica, sans-serif;
    border-top: 4px solid gray;
-   border-bottom: 4px solid gray;
+   border-bottom: 0px;
    background-color: black;
    width: 100%;
    height: 400px;
@@ -180,7 +170,8 @@
 
 .phone {
    font-family: Arial, Helvetica, sans-serif;
-   border-bottom: 4px solid gray;
+   border-top: 4px solid gray;
+   border-bottom: 0px;
    background-color: black;
    width: auto;
    height: 400px;
@@ -230,7 +221,7 @@
 
    font-family: Arial, Helvetica, sans-serif;
    border-top: 4px solid gray;
-   border-bottom: 4px solid gray;
+   border-bottom: 0px;
    background-color: black;
    width: 100%;
    height: 400px;
@@ -276,9 +267,9 @@
 .footer-links{
       width: 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     height: auto;
-    background-color: silver;
+    background-color: rgba(0, 0, 0, 0.75);
 
     .icon {
     margin: 5px;

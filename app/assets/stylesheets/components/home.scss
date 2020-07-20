@@ -9,6 +9,8 @@
 
 .main-video {
     width: 100%;
+    margin-bottom: 50px;
+    border-radius: 10px;
 }
 
 .video-item {
@@ -86,6 +88,15 @@
 
 }
 
+.search-logout{
+    display: flex;
+    margin-right: 20px;
+    .red-button{
+        height: 10px;
+        text-align: center;
+    }
+    
+}
 .home-main-div {
     min-width: 1050px;
     min-height: 100%;
@@ -265,11 +276,12 @@ border-radius: 6px;
 }
 .search-button {
     color: whitesmoke;
+    margin-right: 20px;
     border: 1px solid gray;
     border-radius: 5px;
     height: 25px;
     margin-bottom: 10px;
-        width: 50px;
+    width: 50px;
     text-align: center;
     background: crimson;
     // box-shadow: rgba(0,0,0,0.69) 0px 26px 30px -10px, rgba(0,0,0,0.73) 0px 16px 10px -10px;
