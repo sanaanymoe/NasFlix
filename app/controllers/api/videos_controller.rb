@@ -35,8 +35,14 @@ class Api::VideosController < ApplicationController
 
     def genre 
         # debugger
-        genre_id = Genre.find_by(name: params[:genreName]).id
-        @videos = Video.where(genre_id: genre_id)
-        render "api/videos/index"
+        genre_n = Genre.find_by(name: params[:genreName])
+        if (genre_n) #a genre with the name passed was found
+            genre_id = Genre.find_by(name: params[:genreName]).id
+            @videos = Video.where(genre_id: genre_id)
+            render "api/videos/index"
+        else 
+            @videos = Video.all
+            render "api/videos/index"
+        end 
     end 
 end

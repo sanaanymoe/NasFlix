@@ -26,6 +26,7 @@ class Genre extends React.Component {
 
         return (
             <div className="dropdown-content">
+                <a name="All" onClick={this.handleLinkClick}>All</a>
                 <a name="Comedy" onClick={this.handleLinkClick}>Comedy</a>
                 <a name="Action" onClick={this.handleLinkClick}>Action</a>
                 <a name="Crime" onClick={this.handleLinkClick}>Crime</a>

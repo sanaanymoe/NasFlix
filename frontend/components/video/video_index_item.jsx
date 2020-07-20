@@ -19,9 +19,9 @@ class VideoIndexItem extends React.Component {
         //         $(".video-item").prop("muted", !muted)
         // }
 
-        handleClick() {
+        handleClick(e) {
                 this.state.toggle ? this.setState({ toggle: false }) : this.setState({ toggle: true })
-                // console.log("clicked!")
+                e.currentTarget.play()
         }
 
         playVideo(e) {
