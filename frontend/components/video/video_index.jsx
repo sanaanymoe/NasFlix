@@ -38,6 +38,8 @@ class VideoIndex extends React.Component {
     render () {
         
         let { videos } = this.props
+        let  actionVideos  = videos.filter(video => video.genre.name == ("Action"))  //in case i need to categorize the videos
+        // debugger
         const mainVideo = this.props.videos[Math.floor(Math.random() * videos.length)]
         if (!mainVideo) {
             return null
@@ -113,30 +115,28 @@ class VideoIndex extends React.Component {
                       )))
                       :
                       ( */}
+
+                    {/* <h2>Action</h2>
+                      {
+                          actionVideos.map(video => (
+                            <VideoIndexItem 
+                                  className="in-grid"
+                                  video={video}
+                                  key={video.id}
+                            />
+                          ))
+                      } */}
+
+
                       {
                           videos.map(video => (
+                           
                                 <VideoIndexItem 
                                 className="in-grid"
                                 video={video}
                                 key={video.id}
                                 />
                         ))
-
-                        
-                        // )
-                      
-
-                        
-                    // } 
-                    
-                        // this.state.filteredVideos.map(video => (
-                        //     <VideoIndexItem
-                        //         className="in-grid"
-                        //         video={video}
-                        //         key={video.id}
-                        //     />
-                        // ))
-                    
                     }
                 </div>
             </div>

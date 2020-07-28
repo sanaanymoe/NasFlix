@@ -1,0 +1,68 @@
+.video-player{
+    background-color: black;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.video-player:hover {
+    .back-button{
+        visibility: visible;
+    }
+}
+
+.video-player video{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+
+.back-button{
+    color: white;
+    position: absolute;
+    left: 35px;
+    top: 30px;
+    cursor: pointer;
+    font-size: 25px;
+    visibility: hidden;
+    display: flex;
+}
+
+.back-button:hover{
+    transition: all 1s ease-in-out;
+    transform: scale(1.2);
+}
+
+
+// #hideMe {
+//     -moz-animation: cssAnimation 0s ease-in 5s forwards;
+//     /* Firefox */
+//     -webkit-animation: cssAnimation 0s ease-in 5s forwards;
+//     /* Safari and Chrome */
+//     -o-animation: cssAnimation 0s ease-in 5s forwards;
+//     /* Opera */
+//     animation: cssAnimation 0s ease-in 5s forwards;
+//     -webkit-animation-fill-mode: forwards;
+//     animation-fill-mode: forwards;
+// }
+// @keyframes cssAnimation {
+//     to {
+//         width:0;
+//         height:0;
+//         overflow:hidden;
+//     }
+// }
+// @-webkit-keyframes cssAnimation {
+//     to {
+//         width:0;
+//         height:0;
+//         visibility:hidden;
+//     }
+// }
