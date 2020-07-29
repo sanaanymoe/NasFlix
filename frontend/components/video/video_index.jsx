@@ -55,6 +55,7 @@ class VideoIndex extends React.Component {
                         <Link className="header-link" to="">Home</Link>
                         <Link className="header-link" to="/movies">Movies</Link>
                         <Link className="header-link" to="/shows">TV Shows</Link>
+                        <Link className="header-link" to="/mylist">My List</Link>
                     </div>
                     <span className="search-logout">
                         <SearchContainer/>
