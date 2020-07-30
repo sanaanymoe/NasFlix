@@ -20,13 +20,21 @@ class User < ApplicationRecord
     validates :email, uniqueness: true 
     validates :password, length: {minimum: 6}, allow_nil: true
 
-    has_many :profiles,
-        foreign_key: :user_id,
-        class_name: :Profile 
     
     attr_reader :password
     after_initialize :ensure_session_token
+    
+    has_many :profiles,
+        foreign_key: :user_id,
+        class_name: :Profile 
 
+    has_one :mylist,
+    foreign_key: :user_id,
+    class_name: :List
+    
+    has_many :videos_on_list,
+    through: :mylist,
+    source: :video
     #SPIRE
 
     def self.find_by_credentials(email, password)

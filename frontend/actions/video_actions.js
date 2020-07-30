@@ -46,7 +46,7 @@ export const fetchVideo = (videoId) => dispatch => (
 
 export const fetchVideoDetails = (videoId) => {
     return (dispatch) => {
-        return VideoApiUtils.fetchVideo(videoId)
+        return VideoAPIUtils.fetchVideo(videoId)
             .then(videoDetails => {
                 dispatch(receiveVideoDetails(videoDetails))
             })

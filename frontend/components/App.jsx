@@ -22,6 +22,7 @@ import Errors from '../components/errors/errors'
 import searchContainer from '../components/search/search_container'
 import { AuthRoute, ProtectedRoute } from '../util/route_util'
 import playerContainer from './video/player_container'
+import MyListContainer from './lists/my_list_container';
 
 const App = () => (
     <div> {/* className="sub-main"> */}
@@ -33,6 +34,7 @@ const App = () => (
             <ProtectedRoute path='/shows' component={showsIndexContainer}/>
             <ProtectedRoute path='/home' component={videoIndexContainer}/>
             <ProtectedRoute path="/videos/:id" component={playerContainer} />
+            <ProtectedRoute path='/mylist' component={MyListContainer} />
             {/* <ProtectedRoute path='/search' component={searchContainer}/> */}
         </Switch>
         <Route exact path='/' component={GreetingContainer} />

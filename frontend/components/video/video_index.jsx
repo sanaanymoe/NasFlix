@@ -25,6 +25,7 @@ class VideoIndex extends React.Component {
         this.props.fetchAllVideos()
     }
 
+
     playVideo(e) {
         e.currentTarget.play()
     }

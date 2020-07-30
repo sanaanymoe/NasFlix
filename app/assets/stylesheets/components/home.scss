@@ -259,7 +259,17 @@
         text-align: center;
         color: lightblue; 
     }
+
+    span {
+        background-color: white;
+        border: 1px solid maroon;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
+
 
 .search-form{
 
@@ -301,9 +311,9 @@
 // }
 
 .details-icon{
-    // display: flex;
-    // justify-content: center;
-    position: absolute;
+    display: flex;
+    justify-content: center;
+    // position: absolute;
     cursor: pointer;
     color: white;
     font-size: 25px;
