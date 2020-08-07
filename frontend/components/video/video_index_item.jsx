@@ -42,26 +42,28 @@ class VideoIndexItem extends React.Component {
                         
                         {/* <Link className="video-title" to="">{this.props.video.title}</Link> */}
                         
+                        <div className="video-and-details">
                         <Link key={this.props.video.id} className="video-link" to={`/videos/${this.props.video.id}`}>
-                        
-                        <video 
-                        
-                        className="video-item"
-                        src={this.props.video.video_url}
-                        poster={this.props.video.image}
-                        //   controls onMouseEnter={this.playVideo} 
-                        onMouseEnter={this.playVideo} 
-                        muted={true}
-                        //   autoPlay
-                        onClick={this.handleClick}
-                        //   onClick={() => this.playVideo}
-                        //   controls
-                        //   controls onMouseLeave={this.pauseVideo}
-                        onMouseLeave={this.pauseVideo}
-                        />
-                        </Link>
-                        <div className="details-icon">
-                                <FontAwesomeIcon icon={faChevronDown} size="lg" onClick={this.handleClick}/>
+
+                                <video 
+                                
+                                className="video-item"
+                                src={this.props.video.video_url}
+                                poster={this.props.video.image}
+                                //   controls onMouseEnter={this.playVideo} 
+                                onMouseEnter={this.playVideo} 
+                                muted={true}
+                                //   autoPlay
+                                onClick={this.handleClick}
+                                //   onClick={() => this.playVideo}
+                                //   controls
+                                //   controls onMouseLeave={this.pauseVideo}
+                                onMouseLeave={this.pauseVideo}
+                                />
+                                </Link>
+                                <div className="details-icon">
+                                        <FontAwesomeIcon icon={faChevronDown} size="lg" onClick={this.handleClick}/>
+                                </div>
                         </div>
                         {this.state.toggle ? <VideoItemDetailsContainer videoId={this.props.video.id} /> : ""}
 
