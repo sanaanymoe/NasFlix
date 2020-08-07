@@ -306,12 +306,14 @@
     box-shadow: 0px 5px 6px grey;
 }
 
-// .index-item{
-//     position: relative;
-// }
+.index-item:hover {
+    .details-icon{
+        display: flex;
+    }
+}
 
 .details-icon{
-    display: flex;
+    display: none;
     justify-content: center;
     // position: absolute;
     cursor: pointer;
