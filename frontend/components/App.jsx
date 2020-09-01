@@ -23,6 +23,7 @@ import searchContainer from '../components/search/search_container'
 import { AuthRoute, ProtectedRoute } from '../util/route_util'
 import playerContainer from './video/player_container'
 import MyListContainer from './lists/my_list_container';
+import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 
 const App = () => (
     <div> {/* className="sub-main"> */}
@@ -46,6 +47,10 @@ const App = () => (
             </a>
             <a href="https://github.com/sanaanymoe" target="_blank">
                 <FontAwesomeIcon className="icon" icon={faGithub} />
+            </a>
+            
+            <a href="https://sanaany.netlify.app/" target="_blank">
+                <FontAwesomeIcon className="icon" icon={faGlobe} />
             </a>
         </div>
         
