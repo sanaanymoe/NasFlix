@@ -79,6 +79,9 @@
     background-color: black;
     flex-direction: row;
     justify-content: space-between;
+    border: 0.2px solid white;
+    border-radius: 10px;
+    padding-bottom: 10px;
 
     // div{
     //     display: flex;
@@ -102,7 +105,9 @@
         margin: 0px 0px 0px 40px;
         height: fit-content;
     }
-
+.fa-user {
+    font-size: xx-large;
+}
     
 }
 
@@ -122,6 +127,7 @@
         width: 3vw;
         text-align: center;
         line-height: 0em;
+        background-color: black;
     }
     
 }
@@ -339,9 +345,10 @@
     border-radius: 5px;
     height: 4.5vh;
     margin-bottom: 10px;
-    width: 5.5vw;
+    width: 4vw;
     text-align: center;
     background: crimson;
+    font-weight: 700;
     // box-shadow: rgba(0,0,0,0.69) 0px 26px 30px -10px, rgba(0,0,0,0.73) 0px 16px 10px -10px;
     // box-shadow: 0px 5px 6px grey;
 }
