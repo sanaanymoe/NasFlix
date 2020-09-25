@@ -80,27 +80,45 @@
     flex-direction: row;
     justify-content: space-between;
 
-    div{
+    // div{
+    //     display: flex;
+    // }
+    
+    .sections {
         display: flex;
     }
-    
+
     .header-link {
         color: white;
         margin: 20px 10px;
     }
 
     .red-button {
-        margin-top: 10px;
+        margin-top: 1em;
         box-shadow: 0px 5px 6px grey;
     }
 
+    .dropdown{
+        margin: 0px 0px 0px 40px;
+        height: fit-content;
+    }
+
+    
 }
+
+#header-dropdown{
+    width: 6em;
+    // float: left;
+}
+
+
 
 .search-logout{
     display: flex;
     margin-right: 20px;
+    height: fit-content;
     .red-button{
-        height: 10px;
+        height: 5vh;
         text-align: center;
         line-height: 0em;
     }
@@ -199,7 +217,7 @@
 .dropdown {
   position: relative;
   margin: 30px 0px 0px 40px;
-  width: 80px;
+  width: fit-content;
 //   display: inline-block;
     // display: flex;
     // justify-content: center
@@ -210,13 +228,20 @@
   display: none;
   position: absolute;
   background-color: rgba(0,0,0,.75);
-  min-width: 160px;
+  min-width: auto;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
 
 // Links inside the dropdown 
-.dropdown-content a {
+.dropdown-content a{
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content li{
   color: white;
   padding: 12px 16px;
   text-decoration: none;
@@ -224,10 +249,21 @@
 }
 
 // Change color of dropdown links on hover 
-.dropdown-content a:hover {background-color: red;}
+.dropdown-content a:hover {
+    background-color: red;
+    cursor: pointer;
+}
+.dropdown-content li:hover {
+    background-color: gray;
+    border-radius: 5px;
+    width: auto;
+    cursor: pointer;
+}
 
 // Show the dropdown menu on hover 
-.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
 
 // Change the background color of the dropdown button when the dropdown content is shown 
 .dropdown:hover .dropbtn {background-color: maroon;}
@@ -281,7 +317,7 @@
     // border: 1px solid gray; 
     // height: 26px;
     // top: 10px; 
-    // margin-top: 18px;
+    margin-top: 1em;
     margin-left: 37px;
 }
 
@@ -290,7 +326,9 @@
     border: 1px solid gray;
     margin-right: 5px;
     border-radius: 5px;
-    height: 25px;
+    height: 4.5vh;
+    width: 15vw;
+    text-align: center;
     margin-bottom: 10px;
 }
 .search-button {
@@ -298,13 +336,13 @@
     margin-right: 20px;
     border: 1px solid gray;
     border-radius: 5px;
-    height: 25px;
+    height: 4.5vh;
     margin-bottom: 10px;
-    width: 50px;
+    width: 5.5vw;
     text-align: center;
     background: crimson;
     // box-shadow: rgba(0,0,0,0.69) 0px 26px 30px -10px, rgba(0,0,0,0.73) 0px 16px 10px -10px;
-    box-shadow: 0px 5px 6px grey;
+    // box-shadow: 0px 5px 6px grey;
 }
 
 .video-and-details{

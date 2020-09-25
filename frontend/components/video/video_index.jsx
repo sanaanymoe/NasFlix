@@ -5,9 +5,9 @@ import VideoIndexItem from './video_index_item';
 import SearchContainer from '../../components/search/search_container'
 import GenreContainer from '../../components/genre/genre_container'
 
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faPlay } from "@fortawesome/free-solid-svg-icons";
-// import { faUser } from "@fortawesome/free-solid-svg-icons";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
 // import { faVolumeMute } from "@fortawesome/free-solid-svg-icons";
 
 class VideoIndex extends React.Component {
@@ -50,7 +50,7 @@ class VideoIndex extends React.Component {
             <div className="home-main-div">
 
                 <header className="header-links">
-                    <div>
+                    <div className="sections">
                         <Link className="nas-flix-logo" to="/"><img src={window.logoURL} alt="" /></Link>
                         
                         <Link className="header-link" to="">Home</Link>
@@ -60,15 +60,17 @@ class VideoIndex extends React.Component {
                     </div>
                     <span className="search-logout">
                         <SearchContainer/>
-                        <button className="red-button" id="loout-button" onClick={this.props.logout}>Log Out</button>
+                        {/* <button className="red-button" id="loout-button" onClick={this.props.logout}>Log Out</button> */}
+                    <div className="dropdown">
+                            <button className="red-button dropbtn" id="loout-button"><FontAwesomeIcon icon={faUser}/></button>
+                        <div className="dropdown-content" id="header-dropdown" style={{right:"0"}}>
+                            <ul>
+                                <li onClick={this.props.logout}>Log Out</li>
+                            </ul>
+                        </div>
+                    </div>
                     </span>
 
-                    {/* <div className="dropdown">
-                        <button className="dropbtn"><FontAwesomeIcon icon={faUser}/></button>
-                        <div className="dropdown-content">
-                            <a onClick={this.props.logout}>Log Out</a>
-                        </div>
-                    </div> */}
 
                 </header>
                 
