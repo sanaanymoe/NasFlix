@@ -95,7 +95,7 @@
 
     .red-button {
         margin-top: 1em;
-        box-shadow: 0px 5px 6px grey;
+        // box-shadow: 0px 5px 6px grey;
     }
 
     .dropdown{
@@ -119,6 +119,7 @@
     height: fit-content;
     .red-button{
         height: 5vh;
+        width: 3vw;
         text-align: center;
         line-height: 0em;
     }
