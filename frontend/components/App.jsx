@@ -8,6 +8,8 @@ import {
     HashRouter
 } from 'react-router-dom';
 
+import Footer from './Footer/Footer'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 
@@ -40,19 +42,6 @@ const App = () => (
         </Switch>
         <Route exact path='/' component={GreetingContainer} />
         <Route exact path='/errors' component={Errors} />
-
-        <div className="footer-links">
-            <a href="https://www.linkedin.com/in/mohamed-sanaany-52112b1b2/" target="_blank">
-                <FontAwesomeIcon className="icon" icon={faLinkedin} />
-            </a>
-            <a href="https://github.com/sanaanymoe" target="_blank">
-                <FontAwesomeIcon className="icon" icon={faGithub} />
-            </a>
-            
-            <a href="https://sanaany.netlify.app/" target="_blank">
-                <FontAwesomeIcon className="icon" icon={faGlobe} />
-            </a>
-        </div>
         
     </div>
 );

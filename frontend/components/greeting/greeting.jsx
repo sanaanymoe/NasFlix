@@ -1,17 +1,13 @@
 import React from 'react';
 import { Link, Redirect } from 'react-router-dom';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 
-
-// import demoUser from  '../../util/demo'
+import Footer from '../Footer/Footer'
 
 class Greeting extends React.Component {
     constructor(props){
         super(props);
         this.demoLoginHandler = this.demoLoginHandler.bind(this)
         this.sessionLinks = this.sessionLinks.bind(this)
-        // this.personalGreeting = this.personalGreeting.bind(this)
     }
     
     demoLoginHandler(event){
@@ -23,8 +19,6 @@ class Greeting extends React.Component {
         return (
             <div className="main-div">
                     <nav className="sub-main">
-                {/* <header>
-                </header> */}
                     <nav className="head-stuff">
                          
                         <Link className="nas-flix-logo" to="/"><img src={window.logoURL} alt=""/></Link>
@@ -42,22 +36,10 @@ class Greeting extends React.Component {
         )
     }
         
-    // personalGreeting(){
-    //     return (
-    //     <nav>
-    //         <p>Signed in as: {`${this.props.currentUser.email}`}</p>
-    //         <button className="red-button" onClick={this.props.logout}>Log Out</button>
-    //     </nav>
-    //     )
-    // }
-        
     render() {
         return (
             <div>
                 {this.props.currentUser ? <Redirect to="/home"/> : this.sessionLinks()}
-
-                
-
 
                 <div className='tv'>
                     <div className='tv-text'>
@@ -70,44 +52,29 @@ class Greeting extends React.Component {
                 </div>
 
 
-            <div className='phone'>
-                <div className='phone-text'>
-                    <h2> Download your shows to watch offline.</h2>
-                    <p> Save your favorites easily and always have something to watch.</p>
-                </div>
+                <div className='phone'>
+                    <div className='phone-text'>
+                        <h2> Download your shows to watch offline.</h2>
+                        <p> Save your favorites easily and always have something to watch.</p>
+                    </div>
 
                     <img src={window.phoneURL} width="400" height="400" />
 
-            </div>
-
-            <div className='tablet'>
-                <div className='tablet-text'>
-                    <h2>Watch everywhere.</h2>
-                    <p>Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV without paying more.</p>
                 </div>
+
+                <div className='tablet'>
+                    <div className='tablet-text'>
+                        <h2>Watch everywhere.</h2>
+                        <p>Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV without paying more.</p>
+                    </div>
 
                     <img src={window.tabletURL} width="400" height="400" />
 
-            </div>
+                </div>
 
-
-
-
-                {/* <div className="footer-links">
-                    <a href="https://www.linkedin.com/in/mohamed-sanaany-52112b1b2/" target="_blank">
-                        <FontAwesomeIcon className="icon" icon={faLinkedin} />
-                    </a>
-                    <a href="https://github.com/sanaanymoe" target="_blank">
-                        <FontAwesomeIcon className="icon" icon={faGithub} />
-                    </a>
-                </div> */}
-            </div>
-           
-           
-            
-        )
-
-        
+                <Footer/>
+            </div>   
+        )     
     }
 }
 

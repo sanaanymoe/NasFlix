@@ -5,6 +5,7 @@ import VideoIndexItem from './video_index_item';
 import SearchContainer from '../../components/search/search_container'
 import GenreContainer from '../../components/genre/genre_container'
 
+import { Avatar, IconButton } from "@material-ui/core"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faPlay } from "@fortawesome/free-solid-svg-icons";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
@@ -60,9 +61,10 @@ class VideoIndex extends React.Component {
                     </div>
                     <span className="search-logout">
                         <SearchContainer/>
-                        {/* <button className="red-button" id="loout-button" onClick={this.props.logout}>Log Out</button> */}
                     <div className="dropdown">
-                            <button className="red-button dropbtn" id="loout-button"><FontAwesomeIcon icon={faUser}/></button>
+
+                        <Avatar src="https://avatars.dicebear.com/api/human/123.svg"/>
+                        {/* <button className="red-button dropbtn" id="loout-button"><FontAwesomeIcon icon={faUser}/></button> */}
                         <div className="dropdown-content" id="header-dropdown" style={{right:"0"}}>
                             <ul>
                                 <li onClick={this.props.logout}>Log Out</li>

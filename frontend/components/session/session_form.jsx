@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import Footer from '../Footer/Footer'
+
 class SessionForm extends React.Component {
 
     constructor(props) {
@@ -53,15 +55,12 @@ class SessionForm extends React.Component {
                 <div className="sub-main">
 
                     <header className="head-stuff">
-                        {/* <Link className="nas-flix-logo" to="/">NasFlix</Link> */}
-                        <Link className="nas-flix-logo" to="/"><img src="https://fontmeme.com/permalink/200627/49ea4c9322c8aa449bd39d80af5de911.png" alt="" /></Link>
-                        {/* <Link className="nas-flix-logo" to="/"><img src={require("../../../app/assets/images/logo.png")} alt="" /></Link> */}
+                        <Link className="nas-flix-logo" to="/"><img src={window.logoURL} alt="" /></Link>
                     </header>
                     <div className="login-signup-form">
                         <form onSubmit={this.handleSubmit}>
                             <h1 className="form-title">{this.props.formType}</h1>
                             <br/>
-                            
                             <br/>
                             <label>
                                 <input 
@@ -85,14 +84,17 @@ class SessionForm extends React.Component {
                             <br/>
                             <button className="login-sign-up-buttons red-button">{this.props.formType}</button>
                             <span className="red-button options-message">
-                                {/* Please {this.props.formType} or  */}
                                 {this.props.alt}
                             </span>
-                                    {this.renderErrors()} 
+
+                            {this.renderErrors()} 
                         </form>
 
                     </div>
                 </div>
+
+                <Footer />
+                
             </div>
         )
     }
