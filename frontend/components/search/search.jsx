@@ -1,5 +1,6 @@
 import React from 'react'
 import {withRouter} from 'react-router-dom'
+import SearchOutlined from '@material-ui/icons/SearchOutlined'
 
 class Search extends React.Component {
     constructor(props){
@@ -24,7 +25,7 @@ class Search extends React.Component {
 
         return(
             <div>
-                <form className="search-form">
+                <form className="search-form" onSubmit={this.clickHandler}>
 
                     <input 
                     className="search-box"
@@ -32,13 +33,9 @@ class Search extends React.Component {
                         placeholder="Search.."
                         value={this.state.keyword}
                         onChange={this.update('keyword')}
+                        
                     />
-                    <input 
-                        className="search-button"
-                        type="submit"
-                        value="search"
-                        onClick={this.clickHandler}
-                    />
+                    <SearchOutlined type="submit" value="search" onClick={this.clickHandler}/>
                 </form>
             </div>
         )
