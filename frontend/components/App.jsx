@@ -13,6 +13,8 @@ import Footer from './Footer/Footer'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 
+import ReactGA from 'react-ga';
+
 
 import GreetingContainer from './greeting/greeting_container'
 import signupFormContainer from './session/signup_form_container'
@@ -26,6 +28,11 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util'
 import playerContainer from './video/player_container'
 import MyListContainer from './lists/my_list_container';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons';
+
+function initializeReactGA() {
+    ReactGA.initialize('G-B5TX3RLPB0');
+    ReactGA.pageview('/');
+}
 
 const App = () => (
     <div> {/* className="sub-main"> */}
