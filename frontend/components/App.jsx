@@ -31,7 +31,7 @@ import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 
 function initializeReactGA() {
     ReactGA.initialize('G-B5TX3RLPB0');
-    ReactGA.pageview('/');
+    ReactGA.pageview('/home');
 }
 
 const App = () => (
