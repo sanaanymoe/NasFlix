@@ -39,6 +39,18 @@ NasFlex is a NetFlix clone, it has a mix of movies and TV shows trilers.
 
   * `bundle exec rails db:setup`
   
+* Start webpack:
+
+  * `npm start`
+  
+* Start Rails server to run the project locally:
+
+  * `rails s`
+  
+* On your browser navigate to: 
+
+  * `http://localhost:3000/`
+  
 ## features
 
 * User can use a dropdown minue to filter movies and TV shows by Genre
